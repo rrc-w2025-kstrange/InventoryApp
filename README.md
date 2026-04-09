@@ -9,7 +9,7 @@ This inventory app consists of:
 The user can interact with the application using Postman.
 There is no web UI for this project.
 
-## Code & Version Control
+## Code and Version Control
 GitHub is used to manage:
 - Lambda function code
 - Sample web application code
