@@ -1,5 +1,23 @@
-# Cloud based inventory application
+# Cloud-Based Inventory Application
 
-### This inventory app consists of a DynamoDB table, API Gateway and Lambda functions. The user can interact with the inventory app using Postman, there is no web UI for this project.
-GitHub is used to manage the lambda function code and sample web application code. Additionally, Github actions are used to implement some basic CI/CD automation.
-GitHub actions are implemented on specific events, to automatically deploy function code to AWS Lambda, automatically deploy the sample web application code to AWS S3, and automatically check (lint) the code for syntax and formatting issues.
+## Overview
+This inventory app consists of:
+- a DynamoDB table  
+- API Gateway  
+- Lambda functions  
+
+The user can interact with the application using Postman.  
+There is no web UI for this project.
+
+## Code & Version Control
+GitHub is used to manage:
+- Lambda function code  
+- Sample web application code  
+
+## CI/CD (GitHub Actions)
+GitHub Actions are used to implement basic CI/CD automation.
+
+Workflows are triggered on specific events to:
+- Automatically deploy function code to AWS Lambda  
+- Automatically deploy the sample web application code to AWS S3  
+- Automatically check (lint) the code for syntax and formatting issues  
