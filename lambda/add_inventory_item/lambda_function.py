@@ -1,3 +1,4 @@
+# Code to add a new inventory item
 import json
 import boto3
 import uuid
