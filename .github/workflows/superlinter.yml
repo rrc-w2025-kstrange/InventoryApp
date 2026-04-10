@@ -1,26 +1,35 @@
 ---
 name: Super-Linter
+
 on:
   pull_request:
-    types: [opened, reopened, synchronize]
-  workflow_dispatch:
-  
+    types: [opened, reopened]
+
 permissions: {}
+
 jobs:
   build:
     name: Lint
     runs-on: ubuntu-latest
+
     permissions:
+      # contents permission to clone the repository
       contents: read
       packages: read
+      # To report GitHub Actions status checks. 
+      # to update commit status
       statuses: write
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
+          # super-linter needs the full git history to get the
+          # list of files that changed across commits
           fetch-depth: 0
+
       - name: Super-linter
-        uses: super-linter/super-linter@v7.1.0
+        uses: super-linter/super-linter@9e863354e3ff62e0727d37183162c4a88873df41
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_CHECKOV: false
